@@ -1,0 +1,128 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --primary-color: hsl(185, 75%, 39%);
+  --second-color: hsl(229, 23%, 23%);
+  --terciary-color: hsl(227, 10%, 46%);
+  --neutral: hsla(0, 0%, 59%, 0.494);
+}
+
+body{
+  align-items: center;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.container{
+  background-color: white;
+  border-radius: 20px;
+  height: clamp(375px, 50%, 380px);
+  width: clamp(300px, 50%, 350px);
+  z-index: 1;
+}
+
+.img-top{
+  right: 100px;
+  top: 100px;
+  transform: rotate(90deg);
+  transform-origin: 20% 40%;
+  position: relative;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.img-bot{
+  left: 465px;  
+  bottom: 175px;
+  position: relative;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+
+.header{
+  background-image: url(/images/bg-pattern-card.svg);
+  border-radius: 20px 20px 0 0;
+  height: 140px;
+}
+
+.img_user{
+  border: 5px solid white;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 75px;
+  width: 100px;
+  height: 100px;
+}
+
+.details{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.person{
+  margin-bottom: 10px;
+}
+
+.year{
+  color: var(--terciary-color);
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.status{
+  display: flex;
+  border-top: 1px solid  rgba(0, 0, 0, 0.076);
+  height: 90px;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.followers, .likes, .photos{
+  align-items: center;
+  color: var(--neutral);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(100% - 5px);
+}
+
+.destak, .name{
+  color: var(--second-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 500px){
+  .img-bot{
+    left: 95%;
+    bottom: 27%;
+  }
+}
